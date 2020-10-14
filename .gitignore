@@ -36,3 +36,6 @@
 /config/delayed_job_cron.sh
 
 .rbenv-vars
+Capfile
+/config/deploy
+/config/deploy.rb
