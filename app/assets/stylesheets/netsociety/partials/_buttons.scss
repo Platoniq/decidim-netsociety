@@ -1,0 +1,58 @@
+@import "variables";
+
+.button {
+  // background-color: $body-font-color;
+  color: $link-color;
+  border-radius: 0px;
+
+  &:hover, &:focus {
+    color: $link-color;
+  }
+
+  &.hollow{
+    color: $link-color;
+    border-color: $link-color;
+
+    &:hover{
+      color: $link-color;
+
+      &.light{
+        color: $link-color;
+      }
+    }
+  }
+
+  &.disabled{
+    color: $link-color-disabled;
+    &:hover{
+      color: $link-color-disabled;
+    }
+  }
+}
+
+
+// User account page
+.card--list__icon{
+  fill: $primary-heavy;
+}
+
+#user-settings-tabs{
+  .tabs-title{
+    color: $link-color;
+    &:hover > a{
+      color: $link-color;
+    }
+    &.is-active > a{
+      color: $link-color;
+      box-shadow: inset 4px 0 0 $primary-heavy;
+    }
+  }
+}
+
+.unread_message__counter{
+  background-color: $primary-heavy;
+}
+
+.author__verified, .author__badge svg{
+  color: $primary-heavy;
+}

@@ -1,0 +1,69 @@
+@import "variables";
+@import "foundation";
+
+.title-bar {
+  background-color: $title-bar-bg;
+  padding: 1.5rem 0.5rem;
+  color: white
+  
+  a,topbar__dropmenu a{
+    color: $body-font-color;
+  }
+}
+
+.navbar {
+  background-color: $navbar-bg;
+  font-family: 'UOC Serif', Georgia, "Times New Roman", Times, serif;
+
+	.main-nav__link {
+		a {
+			color: $navbar-fg;
+		}
+
+		&--active a {
+      color: $navbar-fg;
+      box-shadow: inset 0 4px 0 0 $primary-heavy;
+		}
+	}
+}
+
+.dropdown.menu{
+  .is-dropdown-submenu-parent.is-active{
+    & > a:first-child{
+      color: $primary-light;
+    }
+  }
+}
+
+.topbar_{
+  &_search{
+    input,
+    input:focus{
+      background-color: $navbar-bg;
+      color: $navbar-fg-hover;
+    }
+
+    input::placeholder,
+    textarea::placeholder{
+      color: $navbar-fg-hover;
+    }
+
+    &:not(:focus-within) .button {
+      background-color: $primary-light;
+      color: $body-font-color;
+    }
+  }
+
+  &_dropmenu{
+    .icon{
+      opacity: 0.5;
+    }
+  }
+}
+
+.subhero-cta {
+  color: $body-font-color;
+  &:hover{
+    color: $body-font-color;
+  }
+}
