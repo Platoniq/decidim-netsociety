@@ -59,6 +59,12 @@
       opacity: 0.5;
     }
   }
+
+  &_user{
+    a:hover{
+      color: $primary;
+    }
+  }
 }
 
 .subhero-cta {
