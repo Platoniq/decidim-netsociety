@@ -1,0 +1,11 @@
+@import "variables";
+
+.button {
+  // background-color: $body-font-color;
+  color: $body-font-color;
+  border-radius: 0px;
+
+  &:hover, &:focus {
+    color: $body-font-color;
+  }
+}
