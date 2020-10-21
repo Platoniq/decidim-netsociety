@@ -29,3 +29,30 @@
     }
   }
 }
+
+
+// User account page
+.card--list__icon{
+  fill: $primary-heavy;
+}
+
+#user-settings-tabs{
+  .tabs-title{
+    color: $link-color;
+    &:hover > a{
+      color: $link-color;
+    }
+    &.is-active > a{
+      color: $link-color;
+      box-shadow: inset 4px 0 0 $primary-heavy;
+    }
+  }
+}
+
+.unread_message__counter{
+  background-color: $primary-heavy;
+}
+
+.author__verified, .author__badge svg{
+  color: $primary-heavy;
+}
