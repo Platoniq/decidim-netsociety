@@ -15,6 +15,17 @@
 
     &:hover{
       color: $link-color;
+
+      &.light{
+        color: $link-color;
+      }
+    }
+  }
+
+  &.disabled{
+    color: $link-color-disabled;
+    &:hover{
+      color: $link-color-disabled;
     }
   }
 }

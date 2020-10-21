@@ -21,6 +21,8 @@ $alert: #ec5840;
 $alert-rgb: 236,88,64;
 
 $link-color: $secondary;
+$link-color-disabled: desaturate($secondary, 50%);
+$link-color-hover: lighten($secondary, 10%);
 
 $proposals: #238ff7;
 $actions: #57d685;

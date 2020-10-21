@@ -67,12 +67,14 @@ h6,
 
 a,
 .card__link,
-.author-data .author__name{
+.author-data .author__name,
+.card__icondata ul li:first-child, .card__block ul li:first-child,
+.process-nav__link{
   color: $link-color;
   text-decoration: underline;
 
   &:hover {
-    color: $link-color;
+    color: $link-color-hover;
   }
 }
 
