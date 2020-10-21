@@ -2,10 +2,19 @@
 
 .button {
   // background-color: $body-font-color;
-  color: $body-font-color;
+  color: $link-color;
   border-radius: 0px;
 
   &:hover, &:focus {
-    color: $body-font-color;
+    color: $link-color;
+  }
+
+  &.hollow{
+    color: $link-color;
+    border-color: $link-color;
+
+    &:hover{
+      color: $link-color;
+    }
   }
 }

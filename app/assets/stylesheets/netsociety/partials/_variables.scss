@@ -7,10 +7,11 @@ $uoc-corporate: #ff7d87;
 $uoc-alumni: #bd9eff;
 $uoc-media: #ff87ff;
 
+$primary-heavy: $uoc-ri;
 $primary-light: $uoc-ri-light;
 $primary: $uoc-ri-light;
 $primary-rgb: 195,255,222;
-$secondary: #d0d0d0;
+$secondary: lighten($uoc-primary, 5%);
 $secondary-rgb: 89,154,166;
 $success: #57d685;
 $success-rgb: 87,214,133;
@@ -18,6 +19,8 @@ $warning: #ffae00;
 $warning-rgb: 255,174,0;
 $alert: #ec5840;
 $alert-rgb: 236,88,64;
+
+$link-color: $secondary;
 
 $proposals: #238ff7;
 $actions: #57d685;

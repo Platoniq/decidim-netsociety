@@ -65,10 +65,22 @@ h6,
   // letter-spacing: -.5px;
 }
 
-a{
-  color: $secondary;
+a,
+.card__link,
+.author-data .author__name{
+  color: $link-color;
+  text-decoration: underline;
+
+  &:hover {
+    color: $link-color;
+  }
 }
 
-label{
+label,
+.home-pam__title{
   color: $body-font-color;
+}
+
+.section-heading::before{
+  background-color: $primary-heavy;
 }

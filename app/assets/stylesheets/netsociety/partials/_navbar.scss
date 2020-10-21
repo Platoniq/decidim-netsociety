@@ -60,8 +60,9 @@
   }
 }
 
-
-
 .subhero-cta {
   color: $body-font-color;
+  &:hover{
+    color: $body-font-color;
+  }
 }
