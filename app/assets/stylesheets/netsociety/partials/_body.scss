@@ -44,6 +44,16 @@ body {
   color: $body-font-color;
 }
 
+.off-canvas{
+  background-color: $body-font-color;
+
+  .close-button{
+    color: $body-font-color;
+  }
+  .usermenu-off-canvas a{
+    color: white;
+  }
+}
 
 h1,
 .h1,
