@@ -1,0 +1,9 @@
+@import "variables";
+
+#conference-day-tabs{
+  a::before {
+    content: 'Starts on';
+    font-weight: normal;
+    display: block;
+  }
+}
