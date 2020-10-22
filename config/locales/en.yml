@@ -1,33 +1,62 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      decidim/conference:
+        one: Conference
+        other: Conferences
+      decidim/conference_speaker:
+        one: Contributor
+        other: Contributors
+      decidim/conference_user_role:
+        one: Conference user role
+        other: Conference user roles
+  decidim:
+    admin:
+      conference_speakers:
+        create:
+          error: There was a problem adding a contributor to this conference.
+          success: Conference contributor successfully created.
+        destroy:
+          success: Conference contributor successfully deleted.
+        edit:
+          title: Update conference contributor.
+          update: Update
+        index:
+          conference_speakers_title: Conference contributors
+        new:
+          create: Create
+          title: New conference contributor.
+        update:
+          error: There was a problem updating this conference contributor.
+          success: Conference contributor successfully updated.
+      menu:
+        conferences: Conferences
+        conferences_submenu:
+          conference_speakers: Contributors
+      models:
+        conference_speaker:
+          name: Conference Contributor
+    admin_log:
+      conference_speaker:
+        create: "%{user_name} created the %{resource_name} contributor in the %{space_name} conference"
+        delete: "%{user_name} removed the %{resource_name} contributor from the %{space_name} conference"
+        update: "%{user_name} updated the %{resource_name} contributor in the %{space_name} conference"
+    conference_speakers:
+      index:
+        title: Contributors
+    conferences:
+      conference_program:
+        program_meeting:
+          speakers: Contributors
+      conference_speakers:
+        index:
+          speakers: Contributors
+    help:
+      participatory_spaces:
+        conferences:
+          contextual: "<p>A <strong>conference</strong> is a collection of meetings arranged in a programme, with a number of people invited as contributors, and other information fields typical of large congresses or social events (registration, list of organisations that support or sponsor the event, etc.).</p> <p>Examples: A conference can be a relevant event for an organization and its members, or take place as part of a participatory process or follow a consultation.</p>\n"
+          page: "<p>A <strong>conference</strong> is a collection of meetings arranged in a programme, with a number of people invited as contributors, and other information fields typical of large congresses or social events (registration, list of organisations that support or sponsor the event, etc.).</p> <p>Examples: A conference can be a relevant event for an organization and its members, or take place as part of a participatory process or follow a consultation.</p>\n"
+  layouts:
+    decidim:
+      conferences_nav:
+        conference_speaker_menu_item: Contributors
