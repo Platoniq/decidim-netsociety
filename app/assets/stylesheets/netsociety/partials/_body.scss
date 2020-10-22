@@ -67,12 +67,17 @@ h5,
 .h5,
 h6,
 .h6{
-  font-family: 'UOC Serif', serif;
+  font-family: 'UOC Serif', "Times New Roman", serif;
   font-style: normal;
   font-weight: normal;
   color: inherit;
   // text-rendering: optimizeLegibility;
   // letter-spacing: -.5px;
+}
+
+.section-heading{
+  font-family: 'UOC Sans', Helvetica, sans-serif;
+  font-style: normal;
 }
 
 a,
