@@ -1,0 +1,18 @@
+@import "variables";
+
+#conference-day-tabs{
+  a::before {
+    content: 'Starts on';
+    font-weight: normal;
+    display: block;
+  }
+}
+
+.conference-programme{
+  .programme-time{
+    visibility: hidden;
+  }
+  .tabs.buttons__row{
+    display: none;
+  }
+}

@@ -14,9 +14,19 @@
   }
 }
 
+.process-nav__link{
+  font-family: 'UOC Serif';
+  text-transform: none;
+  font-weight: normal;
+}
+
 .process-header__hashtag{
   color: $primary-heavy;
+  
   a{
     color: $primary-heavy;
+  }
+  &::after{
+    content: none;
   }
 }
