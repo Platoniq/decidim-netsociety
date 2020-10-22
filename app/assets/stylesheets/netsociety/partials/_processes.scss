@@ -16,7 +16,11 @@
 
 .process-header__hashtag{
   color: $primary-heavy;
+  
   a{
     color: $primary-heavy;
+  }
+  &::after{
+    content: none;
   }
 }
