@@ -8,6 +8,11 @@
   }
 }
 
-.programme-time{
-  visibility: hidden;
+.conference-programme{
+  .programme-time{
+    visibility: hidden;
+  }
+  .tabs.buttons__row{
+    display: none;
+  }
 }
