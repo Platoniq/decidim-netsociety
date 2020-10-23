@@ -57,6 +57,12 @@ en:
       conference_speakers:
         index:
           speakers: Contributors
+    devise:
+      sessions:
+        new:
+          workshop_title: "The Network Society Today:"
+          workshop_subtitle: (Revisiting) the Information Age Trilogy
+          are_you_new?: Please log in to participate in the workshop. Are you new to the platform?
     help:
       participatory_spaces:
         conferences:

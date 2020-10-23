@@ -1,0 +1,7 @@
+.workshop-title{
+  display: inline;
+
+  & + p{
+    margin-top: 2rem;
+  }
+}
