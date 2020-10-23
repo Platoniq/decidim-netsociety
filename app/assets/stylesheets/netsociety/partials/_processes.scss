@@ -23,7 +23,8 @@
 .process-header_{
   &_hashtag{
     color: $primary-heavy;
-    
+    text-decoration: none;
+
     a{
       color: $primary-heavy;
     }
