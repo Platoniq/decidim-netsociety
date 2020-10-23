@@ -15,6 +15,7 @@ module DecidimApp
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    config.meeting_pad_writable_after_hours = ENV.fetch("MEETING_PAD_WRITABLE_AFTER_HOURS", 0).to_i
   end
 end
 
