@@ -1,4 +1,8 @@
 en:
+  activemodel:
+    attributes:
+      participatory_process:
+        local_area: Organization
   activerecord:
     models:
       decidim/conference:
@@ -41,6 +45,8 @@ en:
         create: "%{user_name} created the %{resource_name} contributor in the %{space_name} conference"
         delete: "%{user_name} removed the %{resource_name} contributor from the %{space_name} conference"
         update: "%{user_name} updated the %{resource_name} contributor in the %{space_name} conference"
+    conference_speaker:
+      speaking_at: Contribution
     conference_speakers:
       index:
         title: Contributors
@@ -51,11 +57,24 @@ en:
       conference_speakers:
         index:
           speakers: Contributors
+    devise:
+      sessions:
+        new:
+          workshop_title: "The Network Society Today:"
+          workshop_subtitle: (Revisiting) the Information Age Trilogy
+          are_you_new?: Please log in to participate in the workshop. Are you new to the platform?
     help:
       participatory_spaces:
         conferences:
           contextual: "<p>A <strong>conference</strong> is a collection of meetings arranged in a programme, with a number of people invited as contributors, and other information fields typical of large congresses or social events (registration, list of organisations that support or sponsor the event, etc.).</p> <p>Examples: A conference can be a relevant event for an organization and its members, or take place as part of a participatory process or follow a consultation.</p>\n"
           page: "<p>A <strong>conference</strong> is a collection of meetings arranged in a programme, with a number of people invited as contributors, and other information fields typical of large congresses or social events (registration, list of organisations that support or sponsor the event, etc.).</p> <p>Examples: A conference can be a relevant event for an organization and its members, or take place as part of a participatory process or follow a consultation.</p>\n"
+    meetings:
+      meeting_s:
+        starts_on: Starts on
+        ends_on: Ends on
+    participatory_processes:
+      show:
+        local_area: Organization
   layouts:
     decidim:
       conferences_nav:
