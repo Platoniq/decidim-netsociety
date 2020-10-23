@@ -85,11 +85,13 @@ a,
 .card__link,
 .author-data .author__name,
 .card__icondata ul li:first-child, .card__block ul li:first-child,
+.topbar__dropmenu .is-dropdown-submenu li a,
 .process-nav__link{
   color: $link-color;
   text-decoration: underline;
 
-  &:hover {
+  &:hover,
+  &:focus{
     color: $link-color-hover;
   }
 }
