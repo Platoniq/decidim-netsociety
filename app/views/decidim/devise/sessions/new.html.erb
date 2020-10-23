@@ -4,12 +4,15 @@
   <div class="row collapse">
     <div class="columns large-6">
       <div class="columns large-8 large-centered text-center page-title">
-        <h1 class="workshop-title">
+        <h1 class="workshop__title">
           <%= t(".workshop_title") %>
         </h1>
-        <h2 class="workshop-title">
+        <h2 class="workshop__title">
           <%= t(".workshop_subtitle") %>
         </h2>
+        <div class="workshop__organization-logo">
+          <%= image_tag current_organization.logo.url %>
+        </div>
         <% if current_organization.sign_up_enabled? %>
           <p>
             <%= t(".are_you_new?") %>
