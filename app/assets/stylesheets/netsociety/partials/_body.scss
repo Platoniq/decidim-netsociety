@@ -81,6 +81,7 @@ h6,
 }
 
 a,
+.link,
 .card__link,
 .author-data .author__name,
 .card__icondata ul li:first-child, .card__block ul li:first-child,
@@ -100,4 +101,11 @@ label,
 
 .section-heading::before{
   background-color: $primary-heavy;
+}
+
+
+.card--list__item{
+  .card--list__icon.alert{
+    fill: $primary-heavy;
+  }
 }
