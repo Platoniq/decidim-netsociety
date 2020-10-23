@@ -1,4 +1,8 @@
 en:
+  activemodel:
+    attributes:
+      participatory_process:
+        local_area: Organization
   activerecord:
     models:
       decidim/conference:
@@ -60,6 +64,9 @@ en:
       meeting_s:
         starts_on: Starts on
         ends_on: Ends on
+    participatory_processes:
+      show:
+        local_area: Organization
   layouts:
     decidim:
       conferences_nav:
