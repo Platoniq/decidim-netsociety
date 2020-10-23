@@ -67,7 +67,7 @@ h5,
 .h5,
 h6,
 .h6{
-  font-family: 'UOC Serif', serif;
+  font-family: 'UOC Serif', "Times New Roman", serif;
   font-style: normal;
   font-weight: normal;
   color: inherit;
@@ -75,15 +75,23 @@ h6,
   // letter-spacing: -.5px;
 }
 
+.section-heading{
+  font-family: 'UOC Sans', Helvetica, sans-serif;
+  font-style: normal;
+}
+
 a,
+.link,
 .card__link,
 .author-data .author__name,
 .card__icondata ul li:first-child, .card__block ul li:first-child,
+.topbar__dropmenu .is-dropdown-submenu li a,
 .process-nav__link{
   color: $link-color;
   text-decoration: underline;
 
-  &:hover {
+  &:hover,
+  &:focus{
     color: $link-color-hover;
   }
 }
@@ -95,4 +103,11 @@ label,
 
 .section-heading::before{
   background-color: $primary-heavy;
+}
+
+
+.card--list__item{
+  .card--list__icon.alert{
+    fill: $primary-heavy;
+  }
 }
