@@ -58,6 +58,9 @@ en:
         index:
           speakers: Contributors
     devise:
+      registrations:
+        new:
+          affiliation_help: The academic entity to which you belong.
       sessions:
         new:
           workshop_title: "The Network Society Today:"
