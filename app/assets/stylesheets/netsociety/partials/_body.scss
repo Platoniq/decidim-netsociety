@@ -101,7 +101,8 @@ label,
   color: $body-font-color;
 }
 
-.section-heading::before{
+.section-heading::before,
+.pagination .current{
   background-color: $primary-heavy;
 }
 
