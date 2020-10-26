@@ -22,4 +22,6 @@ $(document).ready(() => {
     .find(undesiredMenuItems.map((item) => `[href="${item}"]`).join(", "))
     .parents(".main-nav__link")
     .remove();
+
+  $(".docs__content").foundation("toggle");
 });
