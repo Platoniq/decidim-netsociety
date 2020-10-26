@@ -45,8 +45,6 @@ en:
         create: "%{user_name} created the %{resource_name} contributor in the %{space_name} conference"
         delete: "%{user_name} removed the %{resource_name} contributor from the %{space_name} conference"
         update: "%{user_name} updated the %{resource_name} contributor in the %{space_name} conference"
-    conference_speaker:
-      speaking_at: Contribution
     conference_speakers:
       index:
         title: Contributors
@@ -54,6 +52,8 @@ en:
       conference_program:
         program_meeting:
           speakers: Contributors
+      conference_speaker:
+        speaking_at: Contribution
       conference_speakers:
         index:
           speakers: Contributors
