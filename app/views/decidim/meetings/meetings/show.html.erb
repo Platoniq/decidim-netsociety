@@ -35,13 +35,10 @@ edit_link(
       <div class="card extra">
         <div class="card__content">
           <div class="extra__date">
-            <%= l meeting.start_time, format: "%d" %>
+            <%= meeting.start_time.strftime("%d") %> - <%= meeting.end_time.strftime("%d") %>
             <span class="extra__month"><%= l meeting.start_time, format: "%B" %>
               <%= l(meeting.start_time, format: "%Y") if meeting.start_time.year != Date.current.year %>
             </span>
-          </div>
-          <div class="extra__time">
-            <%= meeting.start_time.strftime("%H:%M") %> - <%= meeting.end_time.strftime("%H:%M") %>
           </div>
           <%= cell "decidim/meetings/join_meeting_button", meeting, big_button: true, show_remaining_slots: true %>
           <%= render partial: "decidim/shared/follow_button", locals: { followable: meeting, large: false  } %>
@@ -83,25 +80,7 @@ edit_link(
         </div>
       <% end %>
 
-      <% if meeting.services.any? %>
-        <div class="card card--list">
-          <% meeting.services.each do |service| %>
-            <div class="card--list__item">
-              <div class="card--list__text card--list__text--top">
-                <%= icon "actions", class: "card--list__icon alert", role: "img", "aria-hidden": true %>
-                <div>
-                  <h3 class="card--list__heading heading-small"><%= translated_attribute(service["title"]) %></h3>
-                  <span class="text-medium"><%= translated_attribute(service["description"]) %></span>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
-
       <%= resource_reference(meeting) %>
-      <%= render partial: "decidim/shared/share_modal" %>
-      <%= embed_modal_for meeting_meeting_widget_url(meeting, format: :js) %>
     <% end %>
   </div>
   <div class="columns mediumlarge-8 mediumlarge-pull-4">
@@ -117,6 +96,28 @@ edit_link(
         </span>
       <% end %>
       <%= decidim_sanitize(present(meeting).description(links: true)) %>
+
+      <% if meeting.services.any? %>
+        <div class="card card--list">
+          <% meeting.services.each_with_index do |service, index| %>
+            <div class="card--list__item">
+              <div class="card--list__text card--list__text--top">
+                <%= icon "actions", class: "card--list__icon alert", role: "img", "aria-hidden": true %>
+                <div>
+                  <h3 class="card--list__heading heading-small">
+                    <% url = index == 0 ? meeting.pad_url : decidim.pages_path %>
+                    <a <%= url ? "href=#{url} target=_blank" : "class=disabled" %> >
+                      <%= translated_attribute(service["title"]) %>
+                    </a>
+                  </h3>
+                  <span class="text-medium"><%= translated_attribute(service["description"]) %></span>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+
       <%# render partial: "decidim/shared/static_map", locals: { icon_name: "meetings", geolocalizable: meeting } %>
       <%# render partial: "decidim/shared/tags", locals: { resource: meeting, tags_class_extra: "tags--meeting" } %>
     </div>
