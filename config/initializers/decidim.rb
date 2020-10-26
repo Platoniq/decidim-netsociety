@@ -121,6 +121,23 @@ Decidim.configure do |config|
     api_key: Rails.application.secrets.etherpad[:api_key],
     api_version: Rails.application.secrets.etherpad[:api_version]
   }
+
+  Decidim.menu :menu do |menu|
+    process = Decidim::ParticipatoryProcess.where(organization: current_organization).first
+    conference = Decidim::Conference.where(organization: current_organization).first
+
+    menu.item I18n.t("menu.processes", scope: "decidim"),
+              decidim_participatory_processes.participatory_process_path(process),
+              position: 2,
+              if: process.present?,
+              active: %r{^/process(es|_groups)}
+
+    menu.item I18n.t("menu.conferences", scope: "decidim"),
+                    decidim_conferences.conference_path(conference),
+                    position: 6,
+                    if: conference.present?,
+                    active: :inclusive
+  end
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales

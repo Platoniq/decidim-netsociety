@@ -14,3 +14,14 @@
 //= require activestorage
 //= require_tree .
 //= require decidim
+
+const undesiredMenuItems = ["/processes", "/conferences"];
+
+$(document).ready(() => {
+  $(".main-nav")
+    .find(undesiredMenuItems.map((item) => `[href="${item}"]`).join(", "))
+    .parents(".main-nav__link")
+    .remove();
+
+  $(".docs__content").foundation("toggle");
+});
