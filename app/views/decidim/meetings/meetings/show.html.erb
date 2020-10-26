@@ -99,14 +99,17 @@ edit_link(
 
       <% if meeting.services.any? %>
         <div class="card card--list">
-          <% meeting.services.each do |service| %>
+          <% meeting.services.each_with_index do |service, index| %>
             <div class="card--list__item">
               <div class="card--list__text card--list__text--top">
                 <%= icon "actions", class: "card--list__icon alert", role: "img", "aria-hidden": true %>
                 <div>
-                  <%= link_to service["link"] do %>
-                    <h3 class="card--list__heading heading-small"><%= translated_attribute(service["title"]) %></h3>
-                  <% end %>
+                  <h3 class="card--list__heading heading-small">
+                    <% url = index == 0 ? meeting.pad_url : decidim.pages_path %>
+                    <a <%= url ? "href=#{url} target=_blank" : "class=disabled" %> >
+                      <%= translated_attribute(service["title"]) %>
+                    </a>
+                  </h3>
                   <span class="text-medium"><%= translated_attribute(service["description"]) %></span>
                 </div>
               </div>

@@ -94,6 +94,17 @@ a,
   &:focus{
     color: $link-color-hover;
   }
+
+  &.disabled {
+    color: inherit;
+    text-decoration: none;
+    cursor: inherit;
+    
+    &:hover,
+    &:focus{
+      color: inherit;
+    } 
+  }
 }
 
 label,

@@ -174,6 +174,12 @@ module Decidim
 
         (Time.current - end_time) <  Rails.application.config.meeting_pad_writable_after_hours
       end
+
+      def pad_url
+        return unless pad_is_visible?
+        return pad_public_url unless pad_is_writable?
+        return pad_read_only_url
+      end
       
       ## Customization ends here
 
