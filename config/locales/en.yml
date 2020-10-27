@@ -51,7 +51,7 @@ en:
     conferences:
       conference_program:
         program_meeting:
-          speakers: Contributors
+          speakers: Discussant
       conference_speaker:
         speaking_at: Contribution
       conference_speakers:
