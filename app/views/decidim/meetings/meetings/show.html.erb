@@ -106,9 +106,14 @@ edit_link(
                 <div>
                   <h3 class="card--list__heading heading-small">
                     <% url = index == 0 ? meeting.pad_url : decidim.pages_path %>
-                    <a <%= url ? "href=#{url} target=_blank" : "class=disabled" %> >
+                    <a <%= url.present? ? "href=#{url} target=_blank" : "class=disabled" %> >
                       <%= translated_attribute(service["title"]) %>
                     </a>
+                    <% if index == 0 && url.blank? %>
+                      <span class="text-medium help-text-service">
+                        <%= t(".pad_availability_warning") %>
+                      </span>
+                    <% end %>
                   </h3>
                   <span class="text-medium"><%= translated_attribute(service["description"]) %></span>
                 </div>

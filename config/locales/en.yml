@@ -75,6 +75,9 @@ en:
       meeting_s:
         starts_on: Starts on
         ends_on: Ends on
+      meetings:
+        show:
+          pad_availability_warning: (Pad will be available when panel starts)
     pad_iframe:
       pad: Participate in the conversation
       explanation: Already know the mechanics? Start contributing. Go to the DISCUSSION by [scrolling down to / clicking on the left menu]. Still don't know how to participate? Please go to <a href="/processes/information-age-trilogy">How It Works</a>
