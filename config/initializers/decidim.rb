@@ -138,6 +138,8 @@ Decidim.configure do |config|
                     if: conference.present?,
                     active: :inclusive
   end
+
+  config.maximum_attachment_size = 100.megabytes
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
