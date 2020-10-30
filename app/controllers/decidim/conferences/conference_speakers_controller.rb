@@ -19,7 +19,7 @@ module Decidim
       private
 
       def speakers
-        @speakers ||= current_participatory_space.speakers.joins(:user).unscope(:order).order("decidim_users.name ASC")
+        @speakers ||= current_participatory_space.speakers.sort_by { |s| s.user&.name || s.full_name }
       end
 
       alias collection speakers
