@@ -11,7 +11,7 @@
           <%= t(".workshop_subtitle") %>
         </h2>
         <div class="workshop__organization-logo">
-          <%= image_tag current_organization.logo.url %>
+          <%= image_tag current_organization.logo.url if current_organization.logo_url %>
         </div>
         <% if current_organization.sign_up_enabled? %>
           <p>
