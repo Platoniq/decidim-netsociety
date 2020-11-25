@@ -177,7 +177,7 @@ module Decidim
 
       def pad_url
         return unless pad_is_visible?
-        return pad_public_url unless pad_is_writable?
+        return pad_public_url if pad_is_writable?
         return pad_read_only_url
       end
       
